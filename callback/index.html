@@ -1,0 +1,11 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Voltando ao painel</title><style>:root{color-scheme:dark}body{margin:0;background:#15181e;color:#fff;font:16px/1.55 system-ui,sans-serif}main{max-width:44rem;margin:0 auto;padding:32px 16px}h1{color:#D4EA4A}a{color:#D4EA4A}code{background:#24272f;padding:2px 6px;border-radius:6px;overflow-wrap:anywhere}</style></head><body><main>
+<h1>Voltando ao painel…</h1>
+<p id="msg">Repassando o login do TikTok para o EditorDeVideoPro no seu computador.</p>
+<p>Se nada acontecer, copie a URL completa desta página e cole em <b>Para postar &gt; "Cole a URL de retorno"</b> no painel.</p>
+<script>
+// Nada é guardado aqui: a página só repassa ?code=…&state=… para o servidor local (o code só vale com o client_secret, que fica no seu PC).
+var painel = 'http://localhost:8000/api/tiktok/callback/';
+if (location.search) location.replace(painel + location.search);
+else document.getElementById('msg').textContent = 'Nenhum código recebido.';
+</script>
+</main></body></html>
